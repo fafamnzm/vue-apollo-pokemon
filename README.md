@@ -1,10 +1,14 @@
-# Pokemon Graphql using vue-apollo designed with Vuetify
+## Pokemon Graphql using vue-apollo designed with Vuetify
 
-# Make sure to check the Pokemon and Dashboard for the full demonstration
+Make sure to check the Pokemon and Dashboard for the full demonstration
 
-# It is an infinite scroll. Scroll the Pokemon tab to the end and see it fetch all like insta
+It is an infinite scroll. Scroll the Pokemon tab to the end and see it fetch more data like Instagram
 
-# The data for Dashboard is static data from internet
+The data for Dashboard is static data coppied from internet
+
+You can change the theme between dark and light from NavBar
+
+In addition, click on each Pokemon card for more details about them
 
 ## Project setup
 
