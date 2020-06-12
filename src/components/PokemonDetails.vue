@@ -8,13 +8,17 @@
         }}</v-list-item-title>
       </v-list-item-content>
 
-      <v-list-item-avatar class="mt-5" tile size="80" color="grey">
-        <v-img :src="pokemon.image" />
+      <v-list-item-avatar class="mt-12" tile size="110">
+        <v-img :src="pokemon.image" aspect-ratio="1" contain />
       </v-list-item-avatar>
     </v-list-item>
 
-    <v-card-subtitle class="pb-0 mb-4">
+    <v-card-subtitle>
       {{ pokemon.classification }}
+      <p>
+        {{ pokemon.types[0] }}
+        <span v-if="pokemon.types.length > 1">, {{ pokemon.types[1] }}</span>
+      </p>
     </v-card-subtitle>
     <v-spacer></v-spacer>
 

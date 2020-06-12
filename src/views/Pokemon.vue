@@ -11,11 +11,25 @@
           <!-- Loading -->
           <div v-if="loading" class="loading apollo">
             Loading... : {{ loading }}
-            <v-skeleton-loader
-              ref="skeleton"
-              type="image, list-item-avatar"
-              class="mx-auto"
-            ></v-skeleton-loader>
+            <v-container>
+              <v-row>
+                <v-col
+                  v-for="i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+                  :key="i"
+                  cols="12"
+                  md="4"
+                  sm="6"
+                >
+                  <v-skeleton-loader
+                    ref="skeleton"
+                    type="card"
+                    class="mx-auto"
+                    loading
+                    tile
+                  ></v-skeleton-loader>
+                </v-col>
+              </v-row>
+            </v-container>
           </div>
           <!-- Error -->
           <div v-else-if="error" class="error apollo">
@@ -26,43 +40,71 @@
           <div v-else-if="data" class="result apollo">
             <v-container>
               <v-row align="center" justify="center">
-                <div v-for="pokemon in data.pokemons" :key="pokemon.id">
-                  <v-col>
-                    <v-hover v-slot:default="{ hover }">
-                      <v-dialog
-                        v-model="pokemon.dialog"
-                        scrollable="true"
-                        width="300px"
-                      >
-                        <template v-slot:activator="{ on }">
-                          <PokemonCard
-                            :on="on"
-                            :hover="hover"
-                            :pokemon="pokemon"
-                          />
-                        </template>
+                <v-col
+                  cols="12"
+                  md="4"
+                  sm="6"
+                  v-for="pokemon in data.pokemons"
+                  :key="pokemon.id"
+                >
+                  <v-hover v-slot:default="{ hover }">
+                    <v-dialog v-model="pokemon.dialog" scrollable width="300px">
+                      <template v-slot:activator="{ on }">
+                        <PokemonCard
+                          :on="on"
+                          :hover="hover"
+                          :pokemon="pokemon"
+                        />
+                      </template>
 
-                        <PokemonDetails :pokemon="pokemon" />
-                      </v-dialog>
-                    </v-hover>
-                  </v-col>
-                </div>
+                      <PokemonDetails :pokemon="pokemon" />
+                    </v-dialog>
+                  </v-hover>
+                </v-col>
               </v-row>
+              <div v-if="first <= 150" v-intersect="loadMore">
+                <v-row>
+                  <v-col
+                    v-for="i in [1, 2, 3]"
+                    :key="i"
+                    cols="12"
+                    md="4"
+                    sm="6"
+                  >
+                    <v-skeleton-loader
+                      ref="skeleton"
+                      type="card"
+                      class="mx-auto"
+                      loading
+                      tile
+                    ></v-skeleton-loader>
+                  </v-col>
+                </v-row>
+              </div>
             </v-container>
-            <v-card v-if="first <= 150" v-intersect="loadMore"></v-card>
           </div>
 
           <!-- No result -->
           <div v-else class="no-result apollo">
-            <v-row>
-              <v-col>
-                <v-skeleton-loader
-                  ref="skeleton"
-                  type="image, list-item-avatar"
-                  class="mx-auto"
-                ></v-skeleton-loader>
-              </v-col>
-            </v-row>
+            <v-container>
+              <v-row>
+                <v-col
+                  v-for="i in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]"
+                  :key="i"
+                  cols="12"
+                  md="4"
+                  sm="6"
+                >
+                  <v-skeleton-loader
+                    ref="skeleton"
+                    type="card"
+                    class="mx-auto"
+                    loading
+                    tile
+                  ></v-skeleton-loader>
+                </v-col>
+              </v-row>
+            </v-container>
           </div>
         </template>
       </ApolloQuery>
@@ -95,7 +137,8 @@ export default {
   },
   methods: {
     loadMore() {
-      this.first += 9
+      console.log(this.first)
+      return (this.first += 6)
     }
   }
   // apollo: {
