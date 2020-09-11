@@ -12,8 +12,7 @@ Vue.use(VueApollo)
 const AUTH_TOKEN = "apollo-token"
 
 // Http endpoint
-const httpEndpoint =
-  process.env.VUE_APP_GRAPHQL_HTTP || "https://graphql-pokemon.now.sh" // "https://api.spacex.land/graphql"
+const httpEndpoint = process.env.VUE_APP_GRAPHQL_HTTP || "http://localhost:5000" // "https://graphql-pokemon.now.sh" // "https://api.spacex.land/graphql"
 // Files URL root
 export const filesRoot =
   process.env.VUE_APP_FILES_ROOT ||

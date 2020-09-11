@@ -10,6 +10,12 @@ You can change the theme between dark and light from NavBar
 
 In addition, click on each Pokemon card for more details about them
 
+Quick update: Sooo, the last time I checker, the online server I was using is down
+
+The best replacement I can find is at https://github.com/lucasbento/graphql-pokemon
+
+Clone the repo and "npm installl" then "npm run watch" and it works again
+
 ## Project setup
 
 ```
