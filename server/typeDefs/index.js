@@ -6,7 +6,7 @@ const typeDefs = gql`
     getAllUser: [User!]
     login(userInfo: LoginInput): Login
     pokemon(id: ID!): pokemon
-    pokemons(first: Int!): [pokemon]
+    pokemons(first: Int): [pokemon]
   }
   type pokemon {
     id: ID!
