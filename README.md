@@ -10,22 +10,25 @@ You can change the theme between dark and light from NavBar
 
 In addition, click on each Pokemon card for more details about them
 
-Quick update: Sooo, the last time I checked, the online server I was using was down
-
-The best replacement I can find is at https://github.com/lucasbento/graphql-pokemon
-
-Clone the repo and "npm installl" then "npm run watch" and it works again
+Update: Day "I can't remember" in quarantine. I wrote a backend for this one too. I even wrote something in Angular. Might do something crazy later on, maybe backend with Java or C++ !!!
 
 ## Project setup
 
 ```
-npm install
+in server
+  npm install
+
+in client
+  npm install
 ```
 
 ### Compiles and hot-reloads for development
 
 ```
-npm run serve
+in server:
+  npm start
+in client:
+  npm run serve
 ```
 
 ### Compiles and minifies for production
