@@ -20,6 +20,13 @@ Might do something crazy later on, maybe backend with Java or C++ !!!
 in server
   npm install
 
+  You have to have mongodb installed
+  create .env file and fill it like .env.example
+
+  `DB_CONNECT` is the url to your mongodb
+  `TOKEN_SECRET` is the secret to hash the jwt token
+
+
 in client
   npm install
 ```

@@ -6,7 +6,7 @@ const isAuth = require("./middlewares/index")
 const typeDefs = require("./typeDefs/index")
 const resolvers = require("./resolvers/index")
 
-dotenv.config()
+require("dotenv-safe/config")
 
 // // CORS configuration
 // const corsOptions = {
