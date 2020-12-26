@@ -10,7 +10,9 @@ You can change the theme between dark and light from NavBar
 
 In addition, click on each Pokemon card for more details about them
 
-Update: Day "I can't remember" in quarantine. I wrote a backend for this one too. I even wrote something in Angular. Might do something crazy later on, maybe backend with Java or C++ !!!
+Update: Day "I can't remember" in quarantine. I wrote a backend for this one too. I even wrote something in Angular.
+
+Might do something crazy later on, maybe backend with Java or C++ !!!
 
 ## Project setup
 
